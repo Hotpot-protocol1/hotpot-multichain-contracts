@@ -1,4 +1,4 @@
-# Deployemnts 🚀
+# Deployments 🚀
 
 ## Linea
 
