@@ -2,7 +2,7 @@
 // File: contracts/hotpot/interface/IHotpot.sol
 
 
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.19;
 
 interface IHotpot {
     struct Prize {
@@ -82,7 +82,6 @@ interface IHotpot {
 // OpenZeppelin Contracts (last updated v5.0.0) (utils/StorageSlot.sol)
 // This file was procedurally generated from scripts/generate/templates/StorageSlot.js.
 
-pragma solidity ^0.8.20;
 
 /**
  * @dev Library for reading and writing primitive types to specific storage slots.
@@ -466,7 +465,6 @@ library Address {
 
 // OpenZeppelin Contracts (last updated v5.0.0) (proxy/Proxy.sol)
 
-pragma solidity ^0.8.20;
 
 /**
  * @dev This abstract contract provides a fallback function that delegates all calls to another contract using the EVM
@@ -650,8 +648,6 @@ abstract contract Ownable is Context {
 
 // OpenZeppelin Contracts (last updated v5.0.0) (proxy/beacon/IBeacon.sol)
 
-pragma solidity ^0.8.20;
-
 /**
  * @dev This is the interface that {BeaconProxy} expects of its beacon.
  */
@@ -669,7 +665,6 @@ interface IBeacon {
 
 // OpenZeppelin Contracts (last updated v5.0.0) (proxy/ERC1967/ERC1967Utils.sol)
 
-pragma solidity ^0.8.20;
 
 
 
@@ -864,9 +859,6 @@ library ERC1967Utils {
 
 // OpenZeppelin Contracts (last updated v5.0.0) (proxy/beacon/BeaconProxy.sol)
 
-pragma solidity ^0.8.20;
-
-
 
 
 /**
@@ -923,7 +915,7 @@ contract BeaconProxy is Proxy {
 
 // OpenZeppelin Contracts (last updated v5.0.0) (proxy/beacon/UpgradeableBeacon.sol)
 
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.19;
 
 
 
@@ -991,12 +983,6 @@ contract UpgradeableBeacon is IBeacon, Ownable {
 }
 
 // File: contracts/hotpot/HotpotFactory.sol
-
-
-pragma solidity ^0.8.19;
-
-
-
 
 
 contract HotpotFactory is Ownable {

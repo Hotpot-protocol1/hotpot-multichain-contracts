@@ -2,7 +2,7 @@
 // File: contracts/hotpot/interface/IHotpot.sol
 
 
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.19;
 
 interface IHotpot {
     struct Prize {
@@ -81,7 +81,7 @@ interface IHotpot {
 
 // OpenZeppelin Contracts (last updated v5.0.0) (proxy/utils/Initializable.sol)
 
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.19;
 
 /**
  * @dev This is a base contract to aid in writing upgradeable contracts, or any kind of contract that will be deployed
@@ -312,7 +312,7 @@ abstract contract Initializable {
 
 // OpenZeppelin Contracts (last updated v5.0.0) (utils/Context.sol)
 
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.19;
 
 
 /**
@@ -464,7 +464,7 @@ abstract contract PausableUpgradeable is Initializable, ContextUpgradeable {
 
 // OpenZeppelin Contracts (last updated v5.0.0) (access/Ownable.sol)
 
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.19;
 
 
 
@@ -583,7 +583,7 @@ abstract contract OwnableUpgradeable is Initializable, ContextUpgradeable {
 // File: contracts/hotpot/Hotpot.sol
 
 
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.19;
 
 
 
