@@ -39,6 +39,15 @@ const networks = {
     nativeCurrencySymbol: "ETH",
     WAIT_BLOCK_CONFIRMATIONS: 3,
   },
+  klaytnTestnet: {
+    url: "https://api.baobab.klaytn.net:8651",
+    gasPrice: undefined,
+    accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
+    verifyApiKey: "UNSET",
+    chainId: 1001,
+    nativeCurrencySymbol: "KLAY",
+    WAIT_BLOCK_CONFIRMATIONS: 3,
+  },
 };
 
 module.exports = {
