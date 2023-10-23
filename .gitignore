@@ -9,7 +9,8 @@ node_modules
 coverage
 coverage.json
 typechain
-
+yarn.lock
+package-lock.json
 # don't push the environment vars!
 .env
 
