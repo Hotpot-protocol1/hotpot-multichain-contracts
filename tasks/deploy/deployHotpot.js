@@ -1,0 +1,43 @@
+const { networks } = require("../../networks");
+
+task("deploy-hotpot", "Deploys Hotpot Implementation contract").setAction(
+  async (taskArgs, hre) => {
+    console.log(`Deploying Hotpot contract to ${network.name}`);
+
+    if (network.name === "hardhat") {
+      throw Error(
+        'This command cannot be used on a local development chain.  Specify a valid network or simulate an Functions request locally with "npx hardhat functions-simulate".'
+      );
+    }
+    const hotpot = await ethers.getContractFactory("Hotpot");
+    const hotpotContract = await hotpot.deploy();
+
+    console.log(
+      `\nWaiting 3 blocks for transaction ${hotpotContract.deployTransaction.hash} to be confirmed...`
+    );
+
+    await hotpotContract.deployTransaction.wait(
+      networks[network.name].WAIT_BLOCK_CONFIRMATIONS
+    );
+    console.log(
+      `Hotpot deployed to ${hotpotContract.address} on ${network.name}`
+    );
+    console.log("\nVerifying contract...");
+    try {
+      await run("verify:verify", {
+        address: hotpotContract.address,
+        constructorArguments: [],
+      });
+      console.log("Contract verified");
+    } catch (error) {
+      if (!error.message.includes("Already Verified")) {
+        console.log(
+          "Error verifying contract.  Delete the build folder and try again."
+        );
+        console.log(error);
+      } else {
+        console.log("Contract already verified");
+      }
+    }
+  }
+);
